@@ -46,10 +46,11 @@ void NewArray(object[,] symbols)
 {
     Random rand = new Random();
     int rows = symbols.GetLength(0);
-    int columns = rand.Next(0, 4);
+    // int columns = rand.Next(0, 4);
     for (int i = 0; i < rows; i++)
     {
-        for (int p = 0; p < columns; p++)
+        int columns = rand.Next(0, 3);
+        for (int p = 0; p <= columns; p++)
         {
             Console.Write(symbols[i, rand.Next(0, 4)] + "  ");
         }
